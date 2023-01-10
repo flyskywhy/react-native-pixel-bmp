@@ -29,9 +29,6 @@ pixelBitmap.parse(file).then(function(images){
 // {width: 128, height: 128, data: <Uint8Array ..>}
 ```
 
-# Unsupport
-* __32bit bitmap__
-
 # Related projects
 * [pixel-util](https://github.com/59naga/pixel-util/)
 * [pixel-gif](https://github.com/59naga/pixel-gif-/)

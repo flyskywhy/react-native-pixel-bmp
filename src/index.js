@@ -12,8 +12,8 @@ class PixelBitmap extends PixelUtil {
     return this.createBuffer(file).then(buffer => {
       // to avoid
       //     Uncaught (in promise) ReferenceError: Buffer is not defined
-      //         at BmpDecoder.parseBGR (decoder.js:71)
-      // in bmp-js@0.0.1 on Web
+      //         at BmpDecoder.parseBGR (decoder.js:75)
+      // in bmp-js@0.0.3 on Web
       if (typeof Buffer === 'undefined') {
         global.Buffer = require('buffer').Buffer;
       }
