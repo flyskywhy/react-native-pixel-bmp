@@ -1,7 +1,7 @@
 {
-  "name": "pixel-bmp",
-  "version": "0.0.1",
-  "description": "Parse Bitmap to ImageData in cross-platform",
+  "name": "react-native-pixel-bmp",
+  "version": "1.0.0",
+  "description": "Parse Bitmap to ImageData for React Native",
 
   "main": "src",
 
@@ -17,7 +17,7 @@
   },
 
   "dependencies": {
-    "bmp-js": "^0.0.1",
+    "bmp-js": "^0.0.3",
     "react-native-pixel-util": "^1.0.0"
   },
   "devDependencies": {
@@ -29,17 +29,26 @@
   },
 
   "keywords": [
+    "bmp",
+    "imagedata",
     "pixel",
-    "bmp"
+    "react-native"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/59naga/pixel-bmp.git"
+    "url": "git+https://github.com/flyskywhy/react-native-pixel-bmp.git"
   },
   "bugs": {
-    "url": "https://github.com/59naga/pixel-bmp/issues"
+    "url": "https://github.com/flyskywhy/react-native-pixel-bmp/issues"
   },
-  "homepage": "https://github.com/59naga/pixel-bmp#readme",
+  "homepage": "https://github.com/flyskywhy/react-native-pixel-bmp#readme",
   "author": "59naga <i59naga@icloud.com> (http://berabou.me)",
+  "contributors": [
+    {
+      "name": "Li Zheng",
+      "email": "flyskywhy@gmail.com",
+      "url": "https://github.com/flyskywhy"
+    }
+  ],
   "license": "MIT"
 }

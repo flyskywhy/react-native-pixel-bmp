@@ -1,15 +1,21 @@
-# pixelBitmap [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Coverage Status][coveralls-image]][coveralls]
+# react-native-pixel-bmp
 
-[![Sauce Test Status][sauce-image]][sauce]
+[![npm version](http://img.shields.io/npm/v/react-native-pixel-bmp.svg?style=flat-square)](https://npmjs.org/package/react-native-pixel-bmp "View this project on npm")
+[![npm downloads](http://img.shields.io/npm/dm/react-native-pixel-bmp.svg?style=flat-square)](https://npmjs.org/package/react-native-pixel-bmp "View this project on npm")
+[![npm licence](http://img.shields.io/npm/l/react-native-pixel-bmp.svg?style=flat-square)](https://npmjs.org/package/react-native-pixel-bmp "View this project on npm")
+[![Platform](https://img.shields.io/badge/platform-ios%20%7C%20android%20%7C%20web-989898.svg?style=flat-square)](https://npmjs.org/package/react-native-pixel-bmp "View this project on npm")
 
-> Parse Bitmap to ImageData in cross-platform.
+> Parse Bitmap to ImageData for React Native.
 
 ## Installation
 ```bash
-$ npm install pixel-bmp --save
+$ npm install react-native-pixel-bmp
 ```
+For RN >= 0.65, run `npm install react-native-blob-util`.
+
+For RN < 0.65, run `npm install react-native-blob-util@0.16.3`, and patch manually to [fix: with react-native-web product build will export 'URIUtil' (reexported as 'URIUtil') was not found](https://github.com/RonRadtke/react-native-blob-util/pull/201/files).
 ```js
-var pixelBitmap= require('pixel-bmp');
+var pixelBitmap= require('react-native-pixel-bmp');
 console.log(pixelBitmap); //object
 ```
 
@@ -17,8 +23,7 @@ console.log(pixelBitmap); //object
 
 ## pixelBitmap.parse(`file`) -> promise.then(`images`)
 
-return `images` is Array contains one or more `ImageData`.
-> Return the `object` instead of `ImageData` in Node.js
+return `images` is Array contains one `ImageData`.
 
 ```js
 var file= 'https://59naga.github.io/fixtures/still.BMP';
@@ -30,26 +35,18 @@ pixelBitmap.parse(file).then(function(images){
 ```
 
 # Related projects
-* [pixel-util](https://github.com/59naga/pixel-util/)
-* [pixel-gif](https://github.com/59naga/pixel-gif-/)
-* [pixel-png](https://github.com/59naga/pixel-png/)
-* [pixel-jpg](https://github.com/59naga/pixel-jpg/)
-* __pixel-bmp__
-* [pixel](https://github.com/59naga/pixel/)
-* [pixel-to-ansi](https://github.com/59naga/pixel-to-ansi/)
-* [pixel-to-svg](https://github.com/59naga/pixel-to-svg/)
+* [react-native-pixel](https://github.com/flyskywhy/react-native-pixel)
+* [react-native-pixel-util](https://github.com/flyskywhy/react-native-pixel-util)
+* [react-native-pixel-gif](https://github.com/flyskywhy/react-native-pixel-gif)
+* [react-native-pixel-png](https://github.com/flyskywhy/react-native-pixel-png)
+* [react-native-pixel-jpg](https://github.com/flyskywhy/react-native-pixel-jpg)
+* __react-native-pixel-bmp__
+* [react-native-pixel-webp](https://github.com/flyskywhy/react-native-pixel-webp)
+* [pixel-to-ansi](https://github.com/59naga/pixel-to-ansi)
+* [pixel-to-svg](https://github.com/59naga/pixel-to-svg)
 
 License
 ---
 [MIT][License]
 
 [License]: http://59naga.mit-license.org/
-
-[sauce-image]: http://soysauce.berabou.me/u/59798/pixel-bmp.svg?large
-[sauce]: https://saucelabs.com/u/59798
-[npm-image]:https://img.shields.io/npm/v/pixel-bmp.svg?style=flat-square
-[npm]: https://npmjs.org/package/pixel-bmp
-[travis-image]: http://img.shields.io/travis/59naga/pixel-bmp.svg?style=flat-square
-[travis]: https://travis-ci.org/59naga/pixel-bmp
-[coveralls-image]: http://img.shields.io/coveralls/59naga/pixel-bmp.svg?style=flat-square
-[coveralls]: https://coveralls.io/r/59naga/pixel-bmp?branch=master
