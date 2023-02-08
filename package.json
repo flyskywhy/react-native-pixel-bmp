@@ -1,10 +1,8 @@
 {
   "name": "react-native-pixel-bmp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse Bitmap to ImageData for React Native",
-
   "main": "src",
-
   "scripts": {
     "localhost": "zuul test --local 59798 --open",
 
@@ -15,7 +13,6 @@
       "pre-commit": ""
     }
   },
-
   "dependencies": {
     "bmp-js": "^0.0.3",
     "react-native-pixel-util": "^1.0.1"
@@ -27,7 +24,6 @@
     "ghooks": "^0.3.2",
     "zuul": "^3.7.2"
   },
-
   "keywords": [
     "bmp",
     "imagedata",
