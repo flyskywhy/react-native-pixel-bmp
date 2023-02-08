@@ -4,14 +4,21 @@
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 // Dependencies
-const { PixelUtil } = require('pixel-util');
-const bitmapJs = require('bmp-js');
+import {PixelUtil} from 'react-native-pixel-util';
+import bitmapJs from 'bmp-js';
 
 class PixelBitmap extends PixelUtil {
   parse(file) {
     return this.createBuffer(file).then(buffer => {
-      const bitmap = bitmapJs.decode(buffer);
+      // to avoid
+      //     Uncaught (in promise) ReferenceError: Buffer is not defined
+      //         at BmpDecoder.parseBGR (decoder.js:71)
+      // in bmp-js@0.0.1 on Web
+      if (typeof Buffer === 'undefined') {
+        global.Buffer = require('buffer').Buffer;
+      }
 
+      const bitmap = bitmapJs.decode(buffer);
       const image = this.createImageData(bitmap.width, bitmap.height);
       this.set(image, bitmap);
 
@@ -20,5 +27,5 @@ class PixelBitmap extends PixelUtil {
   }
 }
 
-module.exports = new PixelBitmap();
-module.exports.PixelBitmap = PixelBitmap;
+export default new PixelBitmap();
+export {PixelBitmap};

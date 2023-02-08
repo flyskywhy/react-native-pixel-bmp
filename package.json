@@ -18,7 +18,7 @@
 
   "dependencies": {
     "bmp-js": "^0.0.1",
-    "pixel-util": "^0.0.2"
+    "react-native-pixel-util": "^1.0.0"
   },
   "devDependencies": {
     "brfs": "^1.4.1",
