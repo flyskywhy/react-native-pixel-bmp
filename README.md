@@ -31,7 +31,7 @@ var file= 'https://59naga.github.io/fixtures/still.BMP';
 pixelBitmap.parse(file).then(function(images){
   console.log(images[0]);
 });
-// {width: 128, height: 128, data: <Uint8Array ..>}
+// {width: 128, height: 128, bitPP: 24, bottomUp: true, compression: 0, headerSize: 40, data: <Uint8Array ..>}
 ```
 
 # Related projects
