@@ -15,8 +15,8 @@ For RN >= 0.65, run `npm install react-native-blob-util`.
 
 For RN < 0.65, run `npm install react-native-blob-util@0.16.3`, and patch manually to [fix: with react-native-web product build will export 'URIUtil' (reexported as 'URIUtil') was not found](https://github.com/RonRadtke/react-native-blob-util/pull/201/files).
 ```js
-var pixelBitmap= require('react-native-pixel-bmp');
-console.log(pixelBitmap); //object
+var pixelBitmap = require('react-native-pixel-bmp');
+console.log(pixelBitmap); // object
 ```
 
 # API
@@ -26,7 +26,7 @@ console.log(pixelBitmap); //object
 return `images` is Array contains one `ImageData`.
 
 ```js
-var file= 'https://59naga.github.io/fixtures/still.BMP';
+var file = 'https://59naga.github.io/fixtures/still.BMP';
 
 pixelBitmap.parse(file).then(function(images){
   console.log(images[0]);
